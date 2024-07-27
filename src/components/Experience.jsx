@@ -9,9 +9,9 @@ const Experience = () => {
     <div className="border-b border-neutral-900 pb-4">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -1 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="text-4xl my-20 text-center"
       >
         Experience
       </motion.h1>
