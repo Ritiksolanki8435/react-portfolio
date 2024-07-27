@@ -21,7 +21,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="border-b border-neutral-900 pb-4 lg:mb-35 mt-20">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -29,7 +29,7 @@ const Hero = () => {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl "
+              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
               {" "}
               Ritik Solanki
@@ -58,8 +58,8 @@ const Hero = () => {
               height={400}
               width={400}
               className="rounded-lg"
+              whileInView={{ x: 0, opacity: 1 }}
               initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               src={myProfile}
               alt="profilePic"
