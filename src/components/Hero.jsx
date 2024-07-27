@@ -1,7 +1,6 @@
 /** @format */
 
 import { HERO_CONTENT } from "../constants/index";
-// import profilePic from "../assets/kevinRushProfile.png";
 import myProfile from "../assets/MyProfile.png";
 import { motion } from "framer-motion";
 

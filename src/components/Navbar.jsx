@@ -1,9 +1,11 @@
 /** @format */
 import React from "react";
-import logo from "../assets/kevinRushLogo.png";
-import myLogo from "../assets/mylogo.jpg";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -33,8 +35,12 @@ const Navbar = () => {
         >
           <FaInstagram />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaSquareXTwitter />
+        <a
+          href="https://wa.me/+918435943098"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsappSquare />
         </a>
       </div>
     </nav>
