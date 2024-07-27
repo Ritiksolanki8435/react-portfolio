@@ -22,22 +22,14 @@ export const EXPERIENCES = [
     role: " Jr. Software Developer",
     company: "Technomatz IT Solution Pvt Ltd Indore",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "JavaScript", "TypeScript", "NextJS"],
+    technologies: ["HTML", "CSS", "JavaScript", "TypeScript"],
   },
   {
     year: "March 2023 - August 2023",
     role: "Trainee Software Developer",
     company: "Technomatz IT Solution Pvt Ltd Indore",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "ReactJS",
-      "ExpressJS",
-      "GraphQl",
-    ],
+    technologies: ["JavaScript", "React", "HTML", "CSS"],
   },
 ];
 
@@ -47,14 +39,14 @@ export const PROJECTS = [
     image: project1,
     description:
       "A fully functional e-Learning website with features like Class scheduling , listing, Live classes, and user authentication.",
-    technologies: ["HTML", "CSS", "TypeScript", "React-JS", "ROR"],
+    technologies: ["HTML", "CSS", "TypeScript", "React"],
   },
   {
     title: "Sawah-Leap : The Travel management",
     image: project2,
     description:
       "An application for managing tour and travels, with features such as trip creation, updation , booking and subscriptions.",
-    technologies: ["HTML", "CSS", "TypeScript", "React-JS", "ROR"],
+    technologies: ["HTML", "CSS", "TypeScript", "React"],
   },
   {
     title: "NeutriCare",
@@ -68,14 +60,7 @@ export const PROJECTS = [
     image: project4,
     description:
       "A platform for increasing Reach of your web application using AB testing tool. With extra features of licencing",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Express",
-      "MongoDB",
-      "GraphQL",
-    ],
+    technologies: ["Javascript", "Express", "MongoDB", "GraphQL"],
   },
 ];
 
