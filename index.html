@@ -1,10 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="theme-color" content="#09090b" />
+    <title>Ritik Solanki — Full-Stack (MERN) & AI Developer</title>
+    <meta
+      name="description"
+      content="Ritik Solanki is a software developer building full-stack MERN applications and applied AI: RAG pipelines, vector databases, agentic tool-calling workflows and MCP servers."
+    />
+    <meta property="og:title" content="Ritik Solanki — Full-Stack (MERN) & AI Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack web apps and applied AI: RAG, vector databases, AI agents and MCP."
+    />
+    <meta property="og:type" content="website" />
+    <script>
+      // Dark by default; only a theme the visitor picked with the toggle
+      // overrides it. Runs before first paint to avoid a flash.
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme === "light" ? "light" : "dark");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>

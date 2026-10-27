@@ -1,8 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: "Inter", sans-serif;
+@layer base {
+  :root,
+  :root[data-theme="dark"] {
+    --page: 9 9 11;
+    --surface: 18 18 22;
+    --fg: 236 236 240;
+    --muted: 150 150 164;
+    --accent: 196 255 77;
+    --onaccent: 10 10 10;
+    --accent2: 139 92 246;
+    color-scheme: dark;
+  }
+
+  :root[data-theme="light"] {
+    --page: 248 248 246;
+    --surface: 255 255 255;
+    --fg: 18 18 22;
+    --muted: 88 88 102;
+    --accent: 77 124 15;
+    --onaccent: 255 255 255;
+    --accent2: 109 40 217;
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-page font-sans text-fg antialiased transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-accent text-onaccent;
+  }
+}
+
+@layer components {
+  /* Full-width page container: wide on desktop, leaves room for the side rails on xl */
+  .shell {
+    @apply mx-auto w-full max-w-[1680px] px-5 md:px-10 xl:px-24;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.2em] text-muted;
+  }
+
+  /* Index row whose background sweeps up on hover (transform only) */
+  .sweep {
+    @apply relative isolate;
+  }
+  .sweep::before {
+    content: "";
+    @apply absolute inset-0 -z-10 origin-bottom scale-y-0 bg-fg/[0.04] transition-transform duration-300 ease-out;
+  }
+  .sweep:hover::before,
+  .sweep[data-open="true"]::before {
+    @apply scale-y-100;
+  }
+
+  .card {
+    @apply rounded-3xl border border-fg/10 bg-surface;
+  }
+
+  .tag {
+    @apply rounded-full border border-fg/10 bg-fg/[0.04] px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-fg/80;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent;
+  }
+
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(var(--fg) / 0.4);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3.5 font-medium text-page transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-fg/15 px-6 py-3.5 font-medium transition-colors duration-200 hover:border-accent hover:text-accent;
+  }
+
+  .spotlight {
+    background: radial-gradient(
+      420px circle at var(--x, 50%) var(--y, 50%),
+      rgb(var(--accent) / 0.08),
+      transparent 45%
+    );
+  }
+
+  /* Cheap ambient glow: plain radial gradients, no blur filters */
+  .ambient {
+    background:
+      radial-gradient(40rem 28rem at 10% 0%, rgb(var(--accent2) / 0.14), transparent 70%),
+      radial-gradient(36rem 26rem at 95% 30%, rgb(var(--accent) / 0.08), transparent 70%);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(rgb(var(--fg) / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
