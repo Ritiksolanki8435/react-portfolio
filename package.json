@@ -1,8 +1,12 @@
+
 {
   "name": "react-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
