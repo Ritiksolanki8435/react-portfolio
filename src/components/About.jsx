@@ -1,6 +1,12 @@
 /** @format */
 
-import { TbBolt, TbMapPin, TbSchool, TbShieldCheck, TbStack2 } from "react-icons/tb";
+import {
+  TbBolt,
+  TbMapPin,
+  TbSchool,
+  TbShieldCheck,
+  TbStack2,
+} from "react-icons/tb";
 import workspace from "../assets/ritik-workspace.webp";
 import { ABOUT_TEXT, CONTACT, EDUCATION, NOW } from "../constants";
 import LocalTime from "./ui/LocalTime";
@@ -9,14 +15,31 @@ import SectionHeading from "./ui/SectionHeading";
 import SpotlightCard from "./ui/SpotlightCard";
 
 const PRINCIPLES = [
-  { icon: TbBolt, title: "Performance", text: "Code-splitting, lean queries, fast first paint." },
-  { icon: TbShieldCheck, title: "Reliability", text: "Secure, tested features that stay up in production." },
-  { icon: TbStack2, title: "Ownership", text: "Requirements to deployment, end to end." },
+  {
+    icon: TbBolt,
+    title: "Performance",
+    text: "Code-splitting, lean queries, fast first paint.",
+  },
+  {
+    icon: TbShieldCheck,
+    title: "Reliability",
+    text: "Secure, tested features that stay up in production.",
+  },
+  {
+    icon: TbStack2,
+    title: "Ownership",
+    text: "Requirements to deployment, end to end.",
+  },
 ];
 
 const About = () => (
   <section id="about" className="shell py-24 md:py-32">
-    <SectionHeading index="01" label="About" title="Engineer by craft," accent="builder by nature." />
+    <SectionHeading
+      index="01"
+      label="About"
+      title="Engineer by craft,"
+      accent="builder by nature."
+    />
 
     <div className="grid gap-4 lg:grid-cols-12">
       {/* Portrait */}
@@ -34,8 +57,12 @@ const About = () => (
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
           <figcaption className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-3 text-white">
             <div>
-              <p className="font-display text-xl font-semibold">Build. Ship. Improve.</p>
-              <p className="mt-0.5 text-sm text-white/70">The loop I work in, every day.</p>
+              <p className="font-display text-xl font-semibold">
+                Build. Ship. Improve.
+              </p>
+              <p className="mt-0.5 text-sm text-white/70">
+                The loop I work in, every day.
+              </p>
             </div>
             <span className="shrink-0 rounded-full bg-white/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest">
               Indore
@@ -48,7 +75,10 @@ const About = () => (
       <Reveal className="lg:col-span-8">
         <SpotlightCard className="h-full p-7 md:p-10">
           <p className="eyebrow mb-6">The short story</p>
-          <p className="font-display text-2xl font-medium leading-snug md:text-[2rem] md:leading-[1.25]">
+          <p
+            className="text-2xl font-medium leading-snug md:text-2xl md:leading-[1.25]"
+            style={{ fontFamily: "FangSong, serif" }}
+          >
             {ABOUT_TEXT[0]}
           </p>
           <div className="mt-8 grid gap-5 text-muted md:grid-cols-2">
@@ -65,10 +95,15 @@ const About = () => (
       <Reveal delay={0.05} className="lg:col-span-4">
         <SpotlightCard className="h-full border-accent/30 p-7 md:p-8">
           <p className="eyebrow mb-5 flex items-center gap-2 text-accent">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" /> Right now
+            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />{" "}
+            Right now
           </p>
-          <p className="font-display text-2xl font-semibold leading-tight">{NOW.title}</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{NOW.detail}</p>
+          <p className="font-display text-2xl font-semibold leading-tight">
+            {NOW.title}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            {NOW.detail}
+          </p>
         </SpotlightCard>
       </Reveal>
 
@@ -81,8 +116,12 @@ const About = () => (
               <p className="eyebrow mb-3 flex items-center gap-1.5">
                 <TbMapPin /> Based in
               </p>
-              <p className="font-display text-2xl font-semibold">{CONTACT.location}</p>
-              <p className="mt-1 text-sm text-muted">UTC+5:30 · open to remote</p>
+              <p className="font-display text-2xl font-semibold">
+                {CONTACT.location}
+              </p>
+              <p className="mt-1 text-sm text-muted">
+                UTC+5:30 · open to remote
+              </p>
             </div>
             <p className="font-display text-5xl font-semibold tracking-tight text-fg/90">
               <LocalTime />
@@ -112,7 +151,10 @@ const About = () => (
           </p>
           <ol className="space-y-4">
             {EDUCATION.map((e) => (
-              <li key={e.title} className="flex items-baseline justify-between gap-4 border-b border-fg/10 pb-4 last:border-0 last:pb-0">
+              <li
+                key={e.title}
+                className="flex items-baseline justify-between gap-4 border-b border-fg/10 pb-4 last:border-0 last:pb-0"
+              >
                 <div>
                   <p className="font-medium">{e.title}</p>
                   <p className="text-sm text-muted">
@@ -120,7 +162,9 @@ const About = () => (
                     {e.year && ` · ${e.year}`}
                   </p>
                 </div>
-                <p className="shrink-0 font-mono text-xs text-accent">{e.score}</p>
+                <p className="shrink-0 font-mono text-xs text-accent">
+                  {e.score}
+                </p>
               </li>
             ))}
           </ol>
